@@ -8,19 +8,15 @@
 
 import UIKit
 
-class STopAlert: NSObject {
+open class STopAlert: NSObject {
     
     private static let shared = STopAlert()
     private var popupView: UIView?
     private var popupLabel: UILabel?
     
-    private let defaultDuration: Double = 1.0
-    private let defualtAnimationDuration: Double = 0.5
-    private let defaultBackgroundColor: UIColor = UIColor(red: 109/255, green: 200/255, blue: 87/255, alpha: 1.0)
-    
     override init() { }
     
-    class func showMessage(text: String, backgroundColor: UIColor = shared.defaultBackgroundColor, textColor: UIColor = UIColor.white, duration: Double = shared.defaultDuration, animationDuration: Double = shared.defualtAnimationDuration) {
+    open class func showMessage(text: String, backgroundColor: UIColor = UIColor(red: 109/255, green: 200/255, blue: 87/255, alpha: 1.0), textColor: UIColor = UIColor.white, duration: Double = 1.0, animationDuration: Double = 0.5) {
         
         if shared.popupView != nil { return }
         
