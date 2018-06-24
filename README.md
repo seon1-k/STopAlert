@@ -13,9 +13,11 @@ Let's print out the notification message in the status bar! This is a very neat 
 ## Usage
 
 ```swift
-STopAlert.showMessage(text: "Hello World!") // Just message.
+// Just message.
+STopAlert.showMessage(text: "Hello World!")
 
-STopAlert.showMessage(text: "Hello World!", backgroundColor: .blue, textColor: .darkGray, duration: 2.0, animationDuration: 0.25) // Alert with options.
+// Alert with options.
+STopAlert.showMessage(text: "Hello World!", backgroundColor: .blue, textColor: .darkGray, duration: 2.0, animationDuration: 0.25)
 ```
 
 ## Installation
