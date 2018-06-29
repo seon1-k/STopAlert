@@ -8,7 +8,8 @@ STopAlert is a framework written in Swift that makes it show alert message at th
 
 Let's print out the notification message in the status bar! This is a very neat way to nofity.
 
-![STopAlert](/stop.gif)
+<img src="/stop.gif" width=400/>
+<img src="/stopx.gif" width=400/>
 
 ## Usage
 
