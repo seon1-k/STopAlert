@@ -21,7 +21,7 @@ open class STopAlert: NSObject {
         if shared.popupView != nil { return }
         
         let width = UIScreen.main.bounds.width
-        var height = UIApplication.shared.statusBarFrame.height
+        let height = UIApplication.shared.statusBarFrame.height
         
         let popupView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 0))
         popupView.backgroundColor = backgroundColor
