@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "STopAlert"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Show alert at the top in Swift"
   s.ios.deployment_target = '8.0'
   s.swift_version = '4.0'

@@ -21,7 +21,7 @@ open class STopAlert: NSObject {
         if shared.popupView != nil { return }
         
         let width = UIScreen.main.bounds.width
-        let height = UIApplication.shared.statusBarFrame.height
+        var height = UIApplication.shared.statusBarFrame.height
         
         let popupView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 0))
         popupView.backgroundColor = backgroundColor
@@ -33,6 +33,12 @@ open class STopAlert: NSObject {
         popupLabel.textAlignment = .center
         popupLabel.font = UIFont.systemFont(ofSize: 11)
         popupView.addSubview(popupLabel)
+        
+        if isX() {
+            popupLabel.sizeToFit()
+            popupLabel.center.x = popupView.center.x
+            popupLabel.frame.origin.y = height - popupLabel.frame.height
+        }
         
         if let status = UIApplication.shared.value(forKey: "statusBar") as? UIView {
             status.addSubview(popupView)
@@ -62,5 +68,18 @@ open class STopAlert: NSObject {
                 shared.popupLabel = nil
             })
         }
+    }
+    
+    private class func isX() -> Bool {
+        
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        let max_length = max(width, height)
+        
+        
+        if UIDevice.current.userInterfaceIdiom == .phone && max_length == 812 {
+            return true
+        }
+        return false
     }
 }
