@@ -16,6 +16,22 @@ open class STopAlert: NSObject {
     
     override init() { }
     
+    public enum AlertType {
+        case positive
+        case negative
+    }
+    
+    open class func showMessage(text: String, type: AlertType) {
+        var backgroundColor = UIColor()
+        switch type {
+        case .positive:
+            backgroundColor = UIColor(red: 109/255, green: 200/255, blue: 87/255, alpha: 1.0)
+        case .negative:
+            backgroundColor = .red
+        }
+        showMessage(text: text, backgroundColor: backgroundColor, textColor: .white)
+    }
+    
     open class func showMessage(text: String, backgroundColor: UIColor = UIColor(red: 109/255, green: 200/255, blue: 87/255, alpha: 1.0), textColor: UIColor = UIColor.white, duration: Double = 1.0, animationDuration: Double = 0.5) {
         
         if shared.popupView != nil { return }
