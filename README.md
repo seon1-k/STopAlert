@@ -15,10 +15,15 @@ Let's print out the notification message in the status bar! This is a very neat 
 
 ```swift
 // Just message.
-STopAlert.showMessage(text: "Hello World!")
+STopAlert.show(text: "Hello World!")
+
+// with Case.
+STopAlert.show(text: "Hello World!", type: .positive)
+// positive : green
+// negative : red
 
 // Alert with options.
-STopAlert.showMessage(text: "Hello World!", backgroundColor: .blue, textColor: .darkGray, duration: 2.0, animationDuration: 0.25)
+STopAlert.show(text: "Hello World!", backgroundColor: .blue, textColor: .darkGray, duration: 2.0, animationDuration: 0.25)
 ```
 
 ## Installation
