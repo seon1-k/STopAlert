@@ -6,7 +6,7 @@ STopAlert is a framework written in Swift that makes it show alert message at th
 
 ## Description
 
-Let's print out the notification message in the status bar! This is a very neat way to nofity.
+Let's print out the notification message in the status bar! This is a very neat way to notify.
 
 <img src="/stop.gif" width=400/>
 <img src="/stopx.gif" width=400/>
